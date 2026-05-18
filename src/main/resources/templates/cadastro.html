@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HOME</title>
+</head>
+<body>
+<h1>Cadastro de Aluno</h1>
+<table border="1">
+
+    <tr>
+        <th>Número</th>
+        <th>Nome</th>
+        <th>Sexo</th>
+    </tr>
+
+    <tr th:each="aluno : ${listaAlunos}">
+        <td th:text="${aluno.numero}"></td>
+        <td th:text="${aluno.nome}"></td>
+        <td th:text="${aluno.sexo}"></td>
+    </tr>
+
+</table>
+</body>
+</html>
